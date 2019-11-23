@@ -6,8 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = require("socket.io")(server);
 const debug = require("debug")("app:");
-
-const Interface = require("./events/interface")
+const randomMessages = require("./controllers/randomMessages");
 
 app.use(express.static(path.join(__dirname, '/client')));
 app.use(bodyParser.json());
@@ -17,17 +16,14 @@ app.use(car);
 
 /* Socket.io router */
 io.on("connection", (socket) => {
-    debug(`Socket connected`);
-
-    const eventHandlers = {
-        interface: new Interface(app, socket)
-    };  
-    for (const category in eventHandlers) {
-        const handler = eventHandlers[category].handler;
-        for (const event in handler) {
-            socket.on(event, handler[event]);
-        }
-    }
+    debug(`Socket connected`); 
+    io.emit('Connected');
 });
+
+setInterval(() => {
+        const data = randomMessages.randomMessagesHandler();
+        io.emit('battery-temp-msg', data);
+    }, 1000
+);
 
 module.exports = app;

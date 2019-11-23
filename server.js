@@ -1,6 +1,5 @@
 /* 
  * Starts connections
- *
  */ 
 
 const app = require("./app.js");

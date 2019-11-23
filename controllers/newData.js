@@ -6,4 +6,6 @@ const handleNewData = async (req, res) => {
     res.status(200).send({message: "Received new data"});
 };
 
-module.exports = handleNewData;
+module.exports = {
+    handleNewData
+};
