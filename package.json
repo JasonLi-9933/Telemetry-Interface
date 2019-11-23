@@ -2,9 +2,9 @@
   "name": "telemetry-interface",
   "version": "1.0.0",
   "description": "Telemetry Interface for UBC Solar Car",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
