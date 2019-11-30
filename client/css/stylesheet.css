@@ -1,5 +1,4 @@
 /* Body CSS */
-
 body, html {
     height: 100%;
     margin: 0;
@@ -8,7 +7,6 @@ body, html {
 }
 
 /* Sidebar Styling */
-
 .SideNav {
     height: 100%;
     width: 15%;
@@ -17,8 +15,6 @@ body, html {
     overflow-x: hidden;
     padding-top: 5px;
     float: left;
-    position: relative;
-    clear: both;
 }
 
 .SideNavContent {
@@ -39,7 +35,6 @@ body, html {
 }
 
 /* Style tab links */
-
 .tablink {
     background-color: #555;
     color: white;
@@ -60,7 +55,6 @@ body, html {
 }
 
 /* Style for contents in each tabs */
-
 .tabcontent {
     color: white;
     display: none;
@@ -75,28 +69,25 @@ body, html {
 
 #data {
     border: solid white;
-    padding: 5px;
+    margin: auto;
+    width: 50%;
+    text-align: center;
     clear: both;
 }
 
 /* Style for each tabs */
-
 #Battery {
     background-color: black;
 }
-
 #Motor {
     background-color: black;
 }
-
 #Array {
     background-color: black;
 }
-
 #Error {
     background-color: black;
 }
-
 #Maps {
     background-color: black;
 }
