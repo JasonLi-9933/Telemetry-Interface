@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/stylesheet.css">
+    <title>UBC Solar Telemetry Interface</title>
 </head>
 </head>
 
@@ -67,7 +68,7 @@
                 <div id="data">
                     <h4>Google Map Data</h4>
                     <div id="googleMap" style="width:500px;height:500px"></div>
-                    <script type="text/javascript" src="./script/map.js"></script>
+                    <script type="text/javascript" src="./js/map.js"></script>
                     <!-- Google Maps API: replace KEY_HERE with your API keys                    -->
                     <!-- https://developers.google.com/maps/documentation/javascript/get-api-key -->
                     <script src="https://maps.googleapis.com/maps/api/js?key=KEY_HERE&callback=myMap"></script>
@@ -104,7 +105,8 @@
             <div id="column">
                 <h3>Current</h3>
                 <div id="data">
-                    <h4>Current Data here</h4>
+                    <canvas id="currentChart" width="400" height="400"></canvas>
+                    <script type="text/javascript" src="./js/charts.js"></script>
                 </div>
             </div>
         </div>
