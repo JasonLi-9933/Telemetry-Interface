@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 </head>
@@ -12,35 +12,37 @@
     <!-- Content for the sidebar -->
     <div class="SideNav">
         <img src="Solar_Logo.png" alt="UBC Solar Logo">
+
         <div id="SideNavTitle">Telemetry Interface</div>
-        <div id="SideNavTitle">Connection Status:</div>
-        <div id='data'>
-            <div id="ServerConnectStatus" style="font-weight: bold;">Disconnected</div>
+
+        <div id="SideNavTitle">Connection Status</div>
+        <div id="data">
+            <h4 id="server-connected-disconnected">Disconnected</h4>
         </div>
 
         <div id="SideNavTitle">Velocity</div>
         <div id="data">
-            <div id="speed"></div>
+            <h4 id="velocity">-</h4>
         </div>
 
-        <div id="SideNavTitle">Battery Temperature</div>
+        <div id="SideNavTitle">Battery Current</div>
         <div id="data">
-            <div id="ave-batt-temp">-</div>
+            <h4 id="batt-current">-</h4>
         </div>
 
         <div id="SideNavTitle">Battery Charge</div>
         <div id="data">
-            <h5>Charge goes here</h5>
+            <h4 id="batt-charge">-</h4>
         </div>
 
         <div id="SideNavTitle">Battery Voltage</div>
         <div id="data">
-            <h5>Voltage goes here</h5>
+            <h4 id="batt-voltage">-</h4>
         </div>
 
         <div id="SideNavTitle">Battery Temperature</div>
         <div id="data">
-            <h5>Battery Temp goes here</h5>
+            <h4 id="batt-temp">-</h4>
         </div>
 
         <div id="SideNavTitle">Weather</div>
@@ -51,11 +53,11 @@
 
     <!-- Tabs -->
     <script type="text/javascript" src="js/tabs.js"></script>
-    <button class="tablink" onclick="openPage('Battery', this, '#0033cc')" id="defaultOpen">Battery</button>
-    <button class="tablink" onclick="openPage('Motor', this, '#0033cc')">Motor</button>
-    <button class="tablink" onclick="openPage('Array', this, '#0033cc')">Array</button>
-    <button class="tablink" onclick="openPage('Error', this, '#0033cc')">Error</button>
-    <button class="tablink" onclick="openPage('Maps', this, '#0033cc')">Maps</button>
+    <button class="tablink" onclick="openPage('Battery', this, '#009933')" id="defaultOpen">Battery</button>
+    <button class="tablink" onclick="openPage('Motor', this, '#009933')">Motor</button>
+    <button class="tablink" onclick="openPage('Array', this, '#009933')">Array</button>
+    <button class="tablink" onclick="openPage('Error', this, '#009933')">Error</button>
+    <button class="tablink" onclick="openPage('Maps', this, '#009933')">Maps</button>
 
     <!-- Creating the content for each individual tab -->
     <div class="main">
