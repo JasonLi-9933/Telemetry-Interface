@@ -1,4 +1,8 @@
 // Simple Google Map API
-function carMap() {
-    var mapProp = new google.maps.Map(document.getElementById('googleMap'), {center: {lat: 49.246292, lng: -123.116226}, zoom: 8} 
-    );
+function myMap() {
+    var mapProp = {
+        center: new google.maps.LatLng(51.508742, -0.120850),
+        zoom: 5,
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+}
