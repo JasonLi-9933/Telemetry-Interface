@@ -16,7 +16,9 @@
 
         <table id="Titlebar-table">
             <tr>
-                <td><h2 class="Titlebar-mainheader">Telemetry Interface for Daybreak</h2></td>
+                <td>
+                    <h2 class="Titlebar-mainheader">Telemetry Interface for Daybreak</h2>
+                </td>
             </tr>
         </table>
     </div>
@@ -32,7 +34,7 @@
         </div>
 
         <!-- Communications status -->
-        
+
         <div id="SideNav-Communications">
             <h3 class="SideNav-header"> Communciations</h3>
             <table class="SideNav-table">
@@ -58,7 +60,7 @@
                 </tr>
             </table>
         </div>
-        
+
 
         <!-- Summary of battery status -->
         <div id="SideNav-BatterySummary">
@@ -83,7 +85,7 @@
                     <td>Pack Current</td>
                     <td id="batt-current">000.0</td>
                     <td>A</td>
-                </tr>  
+                </tr>
                 <tr>
                     <td>Max. Temperature</td>
                     <td id="batt-max-temp">000.0</td>
@@ -184,7 +186,7 @@
         </div>
 
         <div id="GraphNav-Temp">
-            <h2> Temperature time-series here</h2>            
+            <h2> Temperature time-series here</h2>
         </div>
 
         <div id="GraphNav-Speed">
@@ -200,10 +202,16 @@
     <!-- Tabs -->
     <script type="text/javascript" src="js/tabs.js"></script>
     <div id="tab-bar">
-        
-        <button class="tablink" onclick="openPage('Faults', this, '#0033cc')" id="defaultOpen"><h3>Other Faults</h3></button>
-        <button class="tablink" onclick="openPage('Maps', this, '#0033cc')"><h3>Maps</h3></button>
-        <button class="tablink" onclick="openPage('Simulation', this, '#0033cc')"><h3>Simulation</h3></button>
+
+        <button class="tablink" onclick="openPage('Faults', this, '#0033cc')" id="defaultOpen">
+            <h3>Other Faults</h3>
+        </button>
+        <button class="tablink" onclick="openPage('Maps', this, '#0033cc')">
+            <h3>Maps</h3>
+        </button>
+        <button class="tablink" onclick="openPage('Simulation', this, '#0033cc')">
+            <h3>Simulation</h3>
+        </button>
     </div>
 
     <!-- Battery Tab -->
@@ -212,7 +220,7 @@
         <!-- BMS State -->
         <div id="Faults-bmsState">
             <h3 class="Faults-header">BMS State</h3>
-            <table class = "tab-table">
+            <table class="tab-table">
                 <tr>
                     <td id="relay-fault">Relay Fault</td>
                     <td id="k3-contactor">K3 Contactor On</td>
@@ -281,25 +289,29 @@
                 </tr>
             </table>
         </div>
-        
+
     </div>
 
     <div id="Maps" class="tabcontent">
-        
-        <script type="text/javascript" src="./js/weather.js"></script>
+
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <h3 id="Location">Weather</h3>
-        <p id="weather">Weather Data Here</p>
-        
+        <p id="WeatherData">Weather Data Here</p>
+
+        <script type="text/javascript" src="./js/weather.js"></script>
+        <script>updateWeather();</script>
+
         <h3 id="Location">Location</h3>
         <h4>Google Map Data</h4>
         <div id="googleMap" style="width:500px;height:500px"></div>
         <script type="text/javascript" src="./js/map.js"></script>
-    
+
         <!-- Google Maps API: replace KEY_HERE with your API keys                    -->
         <!-- https://developers.google.com/maps/documentation/javascript/get-api-key -->
-        
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXKakrCcSWbzkzitYW1I2DOJYL1o9ZEGw&callback=myMap"></script>
-        
+
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXKakrCcSWbzkzitYW1I2DOJYL1o9ZEGw&callback=myMap"></script>
+
     </div>
 
     <div id="Simulation" class="tabcontent">
